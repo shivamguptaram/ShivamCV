@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shivam Gupta</title>
+<style>
+body {margin:0;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+ div{
+ font-family:"Lucida Console",Monaco,monospace;
+ }
+ .author-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    border: 3px solid white;
+        background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+<ul class="nav_bar">
+  <li id="nav_list"><a class="active" href="{{url_for('home')}}">Home</a></li>
+  <li><a href="{{url_for('home')}}">About Me</a></li>
+  <!--<li><a href="#contact">Contact</a></li>
+    <li><a href="#Education">Education</a></li>
+  <li><a href="#Work Experience">Work Experience</a></li><-->
+   <center style="color:white;padding: 14px 16px;"><b>Hi all, my name is Shivam</b></center>
+
+</ul>
+<div style="padding:20px;margin-top:30px;height:100px;">
+    <div class="author-img">
+        <img class="author-img" src="{{url_for('static',filename='Shivam.jpg')}}">
+    </div>
+    <hr>
+    <div style="text-align:center"id="Work Experience">
+    <h1>Work Experience</h1>
+        Rimus Technologies Pvt Ltd<span>- 10 June 2018 - 1 August 2018 (Full Time)</span>
+        <br>
+        Tata consultancy services <span>From 17 june 2019 to Present</span>
+        <br>
+    </div>
+    <hr>
+    <div style="text-align:center" id="Education">
+    <h1>Education</h1>
+        B-Tech:Information Techonology
+        <br>XII :ISC Board
+        <br>X :ICSE Board
+    </div>
+<hr>
+    <div style="text-align:center" id="contact">
+        <h1>Contact Information</h1>
+        <br>
+        Mobile No: 8882512558
+        <br><a href="mailto:shivamgupta.ram@gmail.com">Email Id: shivamgupta.ram@gmail.com</a>
+    </div>
+</div>
+<div class ='Container'>
+    {%block content%}
+    {%endblock%}
+</div>
+
+</body>
+</html>
