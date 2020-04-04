@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Shivam Gupta</title>
-<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
 <style>
 body {margin:0;}
 ul {
@@ -12,15 +12,13 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-
+  position: fixed;
   top: 0%;
   width: 100%;
-    position: relative;
 }
 
 li {
   float: left;
-
 }
 
 li a {
@@ -29,22 +27,18 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-
 }
 
 li a:hover:not(.active) {
   background-color: #111;
-
 }
 
 .active {
   background-color: #4CAF50;
-
 }
 
  div{
  font-family:"Lucida Console",Monaco,monospace;
-   position: relative;
  }
  .author-img {
     width: 250px;
@@ -52,53 +46,46 @@ li a:hover:not(.active) {
     margin: 0 auto;
     margin-bottom: 30px;
 
+    border: 3px solid white;
         background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     float:left;
-	  position: relative;
    }
 
   }
 div.gallery {
   border: 1px solid #ccc;
-    position: relative;
 }
 
 div.gallery:hover {
   border: 1px solid #777;
-    position: relative;
 }
 
 div.gallery img {
   width: 100%;
   height: auto;
-    position: relative;
 }
 
 div.desc {
   padding: 15px;
   text-align: center;
-    position: relative;
 }
 
 * {
   box-sizing: border-box;
-  position: relative;
 }
 
 .responsive {
   padding: 0 6px;
   float: left;
   width: 24.99999%;
-  position: relative;
 }
 
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
     margin: 6px 0;
-
   }
 }
 
@@ -118,21 +105,19 @@ div.desc {
 
 </head>
 <body>
- <canvas id="canvas"></canvas>
-
-
 <ul class="nav_bar">
   <li id="nav_list"><a class="active" href="{{url_for('home')}}">Home</a></li>
-  <li><a href="{{url_for('about')}}">About Me</a></li>
-  <li><a href="#Project">Contact</a></li>
+  <li><a href="{{url_for('home')}}">About Me</a></li>
+  <!--<li><a href="#contact">Contact</a></li>
     <li><a href="#Education">Education</a></li>
-  <li><a href="#Certification">Work Experience</a></li>
+  <li><a href="#Work Experience">Work Experience</a></li><-->
+   <center style="color:white;padding: 14px 16px;"><b>Welcome Recruiter</b></center>
 
 </ul>
-<div style="padding:20px;margin-top:30px;height:300px;position: relative; ">
-    <div class="author-img" style="width:900px;position: relative;">
+<div style="padding:20px;margin-top:30px;height:300px">
+    <div class="author-img" style="width:900px">
 
-        <img class="author-img" style="position: relative;" src="{{url_for('static',filename='Shivam.jpg')}}">
+        <img class="author-img"  src="{{url_for('static',filename='Shivam.jpg')}}">
         <br clear="right">
         <div >
             <center>
@@ -191,48 +176,14 @@ div.desc {
     <div class="desc">Using Python with Excel</div>
   </div>
 </div>
-    <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="{{url_for('static',filename='Udemy_Certificate_Drupal8.jpg')}}">
-      <img src="{{url_for('static',filename='Udemy_Certificate_Drupal8.jpg')}}" alt="Udemy_Certificate_Drupal8" width="600" height="400">
-    </a>
-    <div class="desc">Using Python with Excel</div>
-  </div>
-</div>
-
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <hr>
 <div class="certification" style="text-align:center" id="Certification">
     <h1>Project</h1>
-    <h2>Twitter Sentiment Analysis</h2>
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="{{url_for('static',filename='Twitter_1.jpg')}}">
-      <img src="{{url_for('static',filename='Twitter_1.jpg')}}" alt="Twitter_Sentiment_Analysis_1" width="600" height="400">
-    </a>
-    <div class="desc">Twitter Sentiment Analysis 1</div>
-  </div>
-</div>
-<div style="padding: 0 6px;width: 24.99999%;display:block;margin:0 auto;">
-  <div class="gallery">
-    <a target="_blank" href="{{url_for('static',filename='Twitter_2.jpg')}}">
-      <img src="{{url_for('static',filename='Twitter_2.jpg')}}" alt="Twitter_Sentiment_Analysis_2" width="600" height="400">
-    </a>
-    <div class="desc">Twitter Sentiment Analysis 2</div>
-  </div>
-</div>
 
-<h2>Image Manipulator</h2>
-<div style="padding: 0 6px;width: 30%;display:block;margin:0 auto;">
-  <div class="gallery">
-    <a target="_blank" href="{{url_for('static',filename='Image_Mani.jpg')}}">
-     <center> <img src="{{url_for('static',filename='Image_Mani.jpg')}}"style="text-align:center;" align="middle" alt="Image Manipulator using Python" width="600" height="400">
-    </center>
-    </a>
-    <div class="desc">Image Manipulator using Python</div>
-  </div>
-</div>
+
+
 </div>
 
 
@@ -240,7 +191,7 @@ div.desc {
     {%block content%}
     {%endblock%}
 </div>
-           <script src="{{url_for('static',filename='canvas.js')}}"></script>
+
 
 </body>
 </html>
